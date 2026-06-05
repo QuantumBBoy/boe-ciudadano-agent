@@ -32,7 +32,7 @@ dev = [
 boe-ciudadano = "boe_agent.cli:main"
 
 [project.urls]
-"BOE MCP server" = "https://github.com/estoreasoporte/BoeMCP"
+"BOE MCP server" = "https://github.com/QuantumBBoy/boe-mcp"
 "Data source" = "https://www.boe.es/datosabiertos/"
 
 [tool.hatch.build.targets.wheel]

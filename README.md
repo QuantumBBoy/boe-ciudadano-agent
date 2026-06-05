@@ -8,7 +8,7 @@ orienta hacia recursos de ayuda (incluidos los gratuitos). **Herramienta de
 comprensión y orientación, no de asesoramiento jurídico aplicado.**
 
 Es un *deep agent* (LangChain [deepagents](https://docs.langchain.com/oss/python/deepagents/overview)
-sobre LangGraph) que reaprovecha el servidor MCP [boe-mcp](https://github.com/estoreasoporte/BoeMCP)
+sobre LangGraph) que reaprovecha el servidor MCP [boe-mcp](https://github.com/QuantumBBoy/boe-mcp)
 para hablar con la API de datos abiertos del BOE.
 
 ## La misión
