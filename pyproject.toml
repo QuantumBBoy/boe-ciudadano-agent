@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "boe-ciudadano-agent"
+version = "0.1.0"
+description = "Deep agent que acerca la legislación española a la ciudadanía: traduce a lenguaje llano, localiza la norma aplicable, vigila vigencia y deroga­ciones, y orienta a recursos de ayuda. Herramienta de comprensión y orientación, no de asesoramiento jurídico aplicado."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "boe-ciudadano-agent contributors" }]
+keywords = ["deepagents", "langgraph", "boe", "legislacion", "spain", "legal", "accesibilidad"]
+
+dependencies = [
+    # Validado contra deepagents 0.6.8 / langchain 1.x (API create_deep_agent,
+    # SubAgent, FilesystemBackend(virtual_mode), wrap_model_call/ModelRequest.override).
+    "deepagents>=0.6",
+    "langchain-mcp-adapters>=0.1",
+    "langchain-anthropic>=0.3",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.24",
+]
+
+[project.scripts]
+boe-ciudadano = "boe_agent.cli:main"
+
+[project.urls]
+"BOE MCP server" = "https://github.com/estoreasoporte/BoeMCP"
+"Data source" = "https://www.boe.es/datosabiertos/"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/boe_agent"]
+# Las skills (SKILL.md) viven dentro del paquete y hatchling las incluye sin
+# necesidad de force-include (que en modo editable crearía un paquete-sombra).
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+    "live: pruebas que requieren el servidor boe-mcp real y red (desactivadas por defecto)",
+]
