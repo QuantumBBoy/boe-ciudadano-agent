@@ -7,7 +7,8 @@ name = "boe-ciudadano-agent"
 version = "0.1.0"
 description = "Deep agent que acerca la legislación española a la ciudadanía: traduce a lenguaje llano, localiza la norma aplicable, vigila vigencia y deroga­ciones, y orienta a recursos de ayuda. Herramienta de comprensión y orientación, no de asesoramiento jurídico aplicado."
 readme = "README.md"
-requires-python = ">=3.10"
+# deepagents requiere >=3.11 (Requires-Python <4.0,>=3.11).
+requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [{ name = "boe-ciudadano-agent contributors" }]
 keywords = ["deepagents", "langgraph", "boe", "legislacion", "spain", "legal", "accesibilidad"]
