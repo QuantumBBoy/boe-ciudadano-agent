@@ -1,5 +1,7 @@
 # boe-ciudadano-agent
 
+[![CI](https://github.com/QuantumBBoy/boe-ciudadano-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/QuantumBBoy/boe-ciudadano-agent/actions/workflows/ci.yml)
+
 **Asistente que hace accesible la legislación española a la ciudadanía** — traduce
 a lenguaje llano, localiza la norma aplicable, avisa de cambios y derogaciones, y
 orienta hacia recursos de ayuda (incluidos los gratuitos). **Herramienta de
